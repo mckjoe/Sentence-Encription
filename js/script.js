@@ -1,14 +1,11 @@
 $(document).ready(function() {
   $('#input').submit(function(event) {
-// business logic
-function stripSpace() {
-  return sentence.replace(/\s/g,'');
-}
-
-function reverse(remix) {
-  return remix.split('').reverse().join('');
-}
-
+    function stripSpace() {
+    return sentence.replace(/\s/g,'');
+  }
+  function reverse(remix) {
+    return remix.split('').reverse().join('');
+  }
     var sentence = $('#sentence').val();
     var letterNumber = parseInt(sentence.length / 2);
     var beginning = stripSpace(sentence).charAt(letterNumber);
@@ -19,10 +16,3 @@ function reverse(remix) {
     event.preventDefault();
   });
 });
-// user logic
-
-
-
-// alert(letterNumber);
-// console.log(stripSpace(sentence));
-// console.log(beginning);
